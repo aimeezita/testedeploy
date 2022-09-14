@@ -1,5 +1,6 @@
 package com.generation.refugiodamoda.repository;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -13,5 +14,5 @@ public interface ProdutoRepository extends JpaRepository<Produto,Long>{
 	
 	public List<Produto> findAllByNomeContainingIgnoreCase(@Param("nome") String nome);
 	
-	public List<Produto> findByPrecoBetween(@Param("inicio")Double inicio, @Param("fim")Double fim);
+	public List<Produto> findByPrecoBetween(@Param("inicio")BigDecimal inicio, @Param("fim")BigDecimal fim);
 }

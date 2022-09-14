@@ -1,7 +1,6 @@
 package com.generation.refugiodamoda.model;
 
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -14,8 +13,6 @@ import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-
-import org.springframework.format.annotation.DateTimeFormat;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -36,7 +33,7 @@ public class Usuario {
 	private String nome;
 	
 	@NotNull(message = "Esse campo é obrigatório")
-	@Size(min = 8, max = 20)
+	@Size(min = 8 )
 	private String senha;
 	
 	
@@ -45,7 +42,7 @@ public class Usuario {
 	@NotNull(message = "Esse campo é obrigatório")
 	private String foto;
 	
-	@OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "usuario", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("usuario")
 	private List<Produto> produto;
 

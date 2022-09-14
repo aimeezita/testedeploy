@@ -25,7 +25,7 @@ import com.generation.refugiodamoda.repository.UsuarioRepository;
 import com.generation.refugiodamoda.service.UsuarioService;
 
 @RestController
-@RequestMapping("/usuarios")
+@RequestMapping("/usuarios")	
 //CrossOrigin(origins = "*", allowedHeaders = "*")
 public class UsuarioController {
 

@@ -31,10 +31,10 @@ public class Produto {
 	@Size(min = 10)
 	public String descricao;
 	
-	@NotNull
+	
 	public Integer quantidade;
 	
-	@Column(name = "preco", precision = 8, scale = 2)
+	//@Column(name = "preco", precision = 8, scale = 2)
 	public BigDecimal preco;
 	
 	@NotNull
@@ -111,6 +111,7 @@ public class Produto {
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
 	}
+
 	
 	
 }

@@ -1,6 +1,5 @@
 package com.generation.refugiodamoda.model;
 
-import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -17,6 +16,8 @@ import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
 @Entity
 @Table(name = "tb_usuarios")
 public class Usuario {
@@ -25,6 +26,7 @@ public class Usuario {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
+	@Schema(example = "email@email.com.br")
 	@Email
 	@NotNull(message = "Esse campo é obrigatório")
 	private String usuario;
@@ -36,7 +38,6 @@ public class Usuario {
 	@NotNull(message = "Esse campo é obrigatório")
 	@Size(min = 8 )
 	private String senha;
-	
 	
 	private Date data_nascimento;
 	

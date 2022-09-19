@@ -1,5 +1,6 @@
 package com.generation.refugiodamoda.model;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -39,7 +40,7 @@ public class Usuario {
 	@Size(min = 8 )
 	private String senha;
 	
-	private Date data_nascimento;
+	private LocalDate data_nascimento;
 	
 	@NotNull(message = "Esse campo é obrigatório")
 	private String foto;
@@ -80,11 +81,11 @@ public class Usuario {
 		this.senha = senha;
 	}
 
-	public Date getData_nascimento() {
+	public LocalDate getData_nascimento() {
 		return data_nascimento;
 	}
 
-	public void setData_nascimento(Date data_nascimento) {
+	public void setData_nascimento(LocalDate data_nascimento) {
 		this.data_nascimento = data_nascimento;
 	}
 

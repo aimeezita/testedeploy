@@ -18,15 +18,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
-
 import com.generation.refugiodamoda.model.Usuario;
 import com.generation.refugiodamoda.model.UsuarioLogin;
 import com.generation.refugiodamoda.repository.UsuarioRepository;
 import com.generation.refugiodamoda.service.UsuarioService;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 @RestController
 @RequestMapping("/usuarios")	
-//CrossOrigin(origins = "*", allowedHeaders = "*")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class UsuarioController {
 
 	@Autowired

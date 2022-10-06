@@ -19,15 +19,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
-
 import com.generation.refugiodamoda.model.Produto;
 import com.generation.refugiodamoda.repository.CategoriaRepository;
 import com.generation.refugiodamoda.repository.ProdutoRepository;
 import com.generation.refugiodamoda.repository.UsuarioRepository;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 @RestController
 @RequestMapping("/produtos")
-//CrossOrigin(origin = "*", allowedHeaders = "*")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class ProdutoController {
 	
 	@Autowired

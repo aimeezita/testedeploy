@@ -13,7 +13,7 @@
 	<name>refugiodamoda</name>
 	<description>Projeto Integrador - Refúgio da Moda</description>
 	<properties>
-		<java.version>17</java.version>
+		<java.version>15</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
